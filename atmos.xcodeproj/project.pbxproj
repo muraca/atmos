@@ -3,10 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1012433B262AC48100D0861F /* PlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1012433A262AC48100D0861F /* PlayerComponent.swift */; };
+		10124340262AC4E700D0861F /* SoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1012433F262AC4E700D0861F /* SoundSource.swift */; };
+		10124344262AC6FF00D0861F /* SampledSoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10124343262AC6FF00D0861F /* SampledSoundSource.swift */; };
+		105BDFEC262ACF0400DA8152 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 105BDFEB262ACF0400DA8152 /* AudioKit */; };
+		1080A6EE262AE9CD006EB381 /* Thunderstorm2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6E8262AE9CC006EB381 /* Thunderstorm2.wav */; };
+		1080A6F0262AE9CD006EB381 /* Storm2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6EA262AE9CC006EB381 /* Storm2.wav */; };
+		1080A6F1262AE9CD006EB381 /* Thunderstorm1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6EB262AE9CC006EB381 /* Thunderstorm1.wav */; };
+		1080A6F2262AE9CD006EB381 /* Rain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6EC262AE9CC006EB381 /* Rain.wav */; };
+		1080A6F3262AE9CD006EB381 /* Storm1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6ED262AE9CD006EB381 /* Storm1.wav */; };
+		1080C6B6262B6FA7004BEDB6 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1080C6B5262B6FA7004BEDB6 /* PlayerView.swift */; };
 		10E4A480262AB89600D8B372 /* atmosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E4A47F262AB89600D8B372 /* atmosApp.swift */; };
 		10E4A482262AB89600D8B372 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E4A481262AB89600D8B372 /* ContentView.swift */; };
 		10E4A484262AB89700D8B372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E4A483262AB89700D8B372 /* Assets.xcassets */; };
@@ -16,6 +26,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1012433A262AC48100D0861F /* PlayerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerComponent.swift; sourceTree = "<group>"; };
+		1012433F262AC4E700D0861F /* SoundSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSource.swift; sourceTree = "<group>"; };
+		10124343262AC6FF00D0861F /* SampledSoundSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampledSoundSource.swift; sourceTree = "<group>"; };
+		1080A6E8262AE9CC006EB381 /* Thunderstorm2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Thunderstorm2.wav; sourceTree = "<group>"; };
+		1080A6EA262AE9CC006EB381 /* Storm2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Storm2.wav; sourceTree = "<group>"; };
+		1080A6EB262AE9CC006EB381 /* Thunderstorm1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Thunderstorm1.wav; sourceTree = "<group>"; };
+		1080A6EC262AE9CC006EB381 /* Rain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Rain.wav; sourceTree = "<group>"; };
+		1080A6ED262AE9CD006EB381 /* Storm1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Storm1.wav; sourceTree = "<group>"; };
+		1080C6B5262B6FA7004BEDB6 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		10E4A47C262AB89600D8B372 /* atmos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = atmos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E4A47F262AB89600D8B372 /* atmosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atmosApp.swift; sourceTree = "<group>"; };
 		10E4A481262AB89600D8B372 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,12 +50,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				105BDFEC262ACF0400DA8152 /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10124337262ABC4000D0861F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10124339262AC46800D0861F /* Player */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10124339262AC46800D0861F /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				1012433A262AC48100D0861F /* PlayerComponent.swift */,
+				1080C6B5262B6FA7004BEDB6 /* PlayerView.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		1012433E262AC4D500D0861F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1012433F262AC4E700D0861F /* SoundSource.swift */,
+				10124343262AC6FF00D0861F /* SampledSoundSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1080A6E7262AE93D006EB381 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1080A6EC262AE9CC006EB381 /* Rain.wav */,
+				1080A6ED262AE9CD006EB381 /* Storm1.wav */,
+				1080A6EA262AE9CC006EB381 /* Storm2.wav */,
+				1080A6EB262AE9CC006EB381 /* Thunderstorm1.wav */,
+				1080A6E8262AE9CC006EB381 /* Thunderstorm2.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		10E4A473262AB89600D8B372 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +114,15 @@
 		10E4A47E262AB89600D8B372 /* atmos */ = {
 			isa = PBXGroup;
 			children = (
+				1012433E262AC4D500D0861F /* Model */,
+				10124337262ABC4000D0861F /* View */,
 				10E4A47F262AB89600D8B372 /* atmosApp.swift */,
 				10E4A481262AB89600D8B372 /* ContentView.swift */,
 				10E4A483262AB89700D8B372 /* Assets.xcassets */,
 				10E4A488262AB89700D8B372 /* Persistence.swift */,
 				10E4A48D262AB89700D8B372 /* Info.plist */,
 				10E4A48A262AB89700D8B372 /* atmos.xcdatamodeld */,
+				1080A6E7262AE93D006EB381 /* Sounds */,
 				10E4A485262AB89700D8B372 /* Preview Content */,
 			);
 			path = atmos;
@@ -91,6 +152,9 @@
 			dependencies = (
 			);
 			name = atmos;
+			packageProductDependencies = (
+				105BDFEB262ACF0400DA8152 /* AudioKit */,
+			);
 			productName = atmos;
 			productReference = 10E4A47C262AB89600D8B372 /* atmos.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +182,9 @@
 				Base,
 			);
 			mainGroup = 10E4A473262AB89600D8B372;
+			packageReferences = (
+				105BDFEA262ACF0400DA8152 /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = 10E4A47D262AB89600D8B372 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,8 +199,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1080A6F1262AE9CD006EB381 /* Thunderstorm1.wav in Resources */,
+				1080A6F2262AE9CD006EB381 /* Rain.wav in Resources */,
+				1080A6EE262AE9CD006EB381 /* Thunderstorm2.wav in Resources */,
 				10E4A487262AB89700D8B372 /* Preview Assets.xcassets in Resources */,
+				1080A6F3262AE9CD006EB381 /* Storm1.wav in Resources */,
 				10E4A484262AB89700D8B372 /* Assets.xcassets in Resources */,
+				1080A6F0262AE9CD006EB381 /* Storm2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +217,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				10E4A489262AB89700D8B372 /* Persistence.swift in Sources */,
+				1012433B262AC48100D0861F /* PlayerComponent.swift in Sources */,
+				10124344262AC6FF00D0861F /* SampledSoundSource.swift in Sources */,
+				1080C6B6262B6FA7004BEDB6 /* PlayerView.swift in Sources */,
 				10E4A482262AB89600D8B372 /* ContentView.swift in Sources */,
 				10E4A48C262AB89700D8B372 /* atmos.xcdatamodeld in Sources */,
+				10124340262AC4E700D0861F /* SoundSource.swift in Sources */,
 				10E4A480262AB89600D8B372 /* atmosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,11 +356,12 @@
 				DEVELOPMENT_TEAM = MYZWSTS3TX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = atmos/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.muraca.atmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -302,11 +379,12 @@
 				DEVELOPMENT_TEAM = MYZWSTS3TX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = atmos/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.muraca.atmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -336,6 +414,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		105BDFEA262ACF0400DA8152 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit";
+			requirement = {
+				branch = "v5-main";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		105BDFEB262ACF0400DA8152 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 105BDFEA262ACF0400DA8152 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		10E4A48A262AB89700D8B372 /* atmos.xcdatamodeld */ = {
