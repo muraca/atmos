@@ -10,6 +10,15 @@
 		1012433B262AC48100D0861F /* PlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1012433A262AC48100D0861F /* PlayerComponent.swift */; };
 		10124340262AC4E700D0861F /* SoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1012433F262AC4E700D0861F /* SoundSource.swift */; };
 		10124344262AC6FF00D0861F /* SampledSoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10124343262AC6FF00D0861F /* SampledSoundSource.swift */; };
+		103FDD7D262DC6790056A7E3 /* Bubbles.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD7C262DC6790056A7E3 /* Bubbles.wav */; };
+		103FDD84262DC8850056A7E3 /* Birds.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD83262DC8850056A7E3 /* Birds.wav */; };
+		103FDD87262DCA4B0056A7E3 /* Raft.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD86262DCA4A0056A7E3 /* Raft.wav */; };
+		103FDD8B262DCC580056A7E3 /* Wind.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD8A262DCC580056A7E3 /* Wind.wav */; };
+		103FDD8E262DCD360056A7E3 /* Fire.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD8D262DCD360056A7E3 /* Fire.wav */; };
+		103FDD91262DCDA10056A7E3 /* Seagulls.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD90262DCDA10056A7E3 /* Seagulls.wav */; };
+		103FDD94262DCDFB0056A7E3 /* Water Tap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD93262DCDFB0056A7E3 /* Water Tap.wav */; };
+		103FDD97262DD10E0056A7E3 /* Beach.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD96262DD10E0056A7E3 /* Beach.wav */; };
+		103FDD9A262DD1850056A7E3 /* Waves.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD99262DD1850056A7E3 /* Waves.wav */; };
 		105BDFEC262ACF0400DA8152 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 105BDFEB262ACF0400DA8152 /* AudioKit */; };
 		1080A6EE262AE9CD006EB381 /* Thunderstorm2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6E8262AE9CC006EB381 /* Thunderstorm2.wav */; };
 		1080A6F0262AE9CD006EB381 /* Storm2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6EA262AE9CC006EB381 /* Storm2.wav */; };
@@ -29,6 +38,15 @@
 		1012433A262AC48100D0861F /* PlayerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerComponent.swift; sourceTree = "<group>"; };
 		1012433F262AC4E700D0861F /* SoundSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSource.swift; sourceTree = "<group>"; };
 		10124343262AC6FF00D0861F /* SampledSoundSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampledSoundSource.swift; sourceTree = "<group>"; };
+		103FDD7C262DC6790056A7E3 /* Bubbles.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bubbles.wav; sourceTree = "<group>"; };
+		103FDD83262DC8850056A7E3 /* Birds.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Birds.wav; sourceTree = "<group>"; };
+		103FDD86262DCA4A0056A7E3 /* Raft.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Raft.wav; sourceTree = "<group>"; };
+		103FDD8A262DCC580056A7E3 /* Wind.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wind.wav; sourceTree = "<group>"; };
+		103FDD8D262DCD360056A7E3 /* Fire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Fire.wav; sourceTree = "<group>"; };
+		103FDD90262DCDA10056A7E3 /* Seagulls.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Seagulls.wav; sourceTree = "<group>"; };
+		103FDD93262DCDFB0056A7E3 /* Water Tap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Water Tap.wav"; sourceTree = "<group>"; };
+		103FDD96262DD10E0056A7E3 /* Beach.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Beach.wav; sourceTree = "<group>"; };
+		103FDD99262DD1850056A7E3 /* Waves.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Waves.wav; sourceTree = "<group>"; };
 		1080A6E8262AE9CC006EB381 /* Thunderstorm2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Thunderstorm2.wav; sourceTree = "<group>"; };
 		1080A6EA262AE9CC006EB381 /* Storm2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Storm2.wav; sourceTree = "<group>"; };
 		1080A6EB262AE9CC006EB381 /* Thunderstorm1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Thunderstorm1.wav; sourceTree = "<group>"; };
@@ -86,11 +104,20 @@
 		1080A6E7262AE93D006EB381 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				103FDD96262DD10E0056A7E3 /* Beach.wav */,
+				103FDD83262DC8850056A7E3 /* Birds.wav */,
+				103FDD7C262DC6790056A7E3 /* Bubbles.wav */,
+				103FDD8D262DCD360056A7E3 /* Fire.wav */,
+				103FDD86262DCA4A0056A7E3 /* Raft.wav */,
 				1080A6EC262AE9CC006EB381 /* Rain.wav */,
+				103FDD90262DCDA10056A7E3 /* Seagulls.wav */,
 				1080A6ED262AE9CD006EB381 /* Storm1.wav */,
 				1080A6EA262AE9CC006EB381 /* Storm2.wav */,
 				1080A6EB262AE9CC006EB381 /* Thunderstorm1.wav */,
 				1080A6E8262AE9CC006EB381 /* Thunderstorm2.wav */,
+				103FDD93262DCDFB0056A7E3 /* Water Tap.wav */,
+				103FDD99262DD1850056A7E3 /* Waves.wav */,
+				103FDD8A262DCC580056A7E3 /* Wind.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -200,11 +227,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1080A6F1262AE9CD006EB381 /* Thunderstorm1.wav in Resources */,
+				103FDD87262DCA4B0056A7E3 /* Raft.wav in Resources */,
 				1080A6F2262AE9CD006EB381 /* Rain.wav in Resources */,
 				1080A6EE262AE9CD006EB381 /* Thunderstorm2.wav in Resources */,
+				103FDD97262DD10E0056A7E3 /* Beach.wav in Resources */,
+				103FDD8B262DCC580056A7E3 /* Wind.wav in Resources */,
+				103FDD7D262DC6790056A7E3 /* Bubbles.wav in Resources */,
 				10E4A487262AB89700D8B372 /* Preview Assets.xcassets in Resources */,
+				103FDD94262DCDFB0056A7E3 /* Water Tap.wav in Resources */,
 				1080A6F3262AE9CD006EB381 /* Storm1.wav in Resources */,
+				103FDD84262DC8850056A7E3 /* Birds.wav in Resources */,
+				103FDD9A262DD1850056A7E3 /* Waves.wav in Resources */,
 				10E4A484262AB89700D8B372 /* Assets.xcassets in Resources */,
+				103FDD91262DCDA10056A7E3 /* Seagulls.wav in Resources */,
+				103FDD8E262DCD360056A7E3 /* Fire.wav in Resources */,
 				1080A6F0262AE9CD006EB381 /* Storm2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
