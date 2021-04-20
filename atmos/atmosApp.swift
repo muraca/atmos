@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct atmosApp: App {
-    let persistenceController = PersistenceController.shared
+    let shared = SharedData()
 
     var body: some Scene {
         WindowGroup {
             PlayerView()
+                .environmentObject(shared)
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

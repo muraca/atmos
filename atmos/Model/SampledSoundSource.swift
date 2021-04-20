@@ -9,46 +9,57 @@ import Foundation
 import AudioKit
 import AVFoundation
 
-struct SampledSoundSource: SoundSource {
-    var name: String
-    
-    var soundSource: AudioPlayer?
-    
-    init(fileName: String) {
-        name = String(fileName.dropLast(4))
+class SampledSoundSource: Hashable, Identifiable {
+    static func == (lhs: SampledSoundSource, rhs: SampledSoundSource) -> Bool {
+        return lhs.id == rhs.id
+    }
 
-        guard let url = Bundle.main.url(forResource: name, withExtension: "wav") else {return}
+    func hash(into hasher: inout Hasher) {
+        return id.hash(into: &hasher)
+    }
+
+    var id: Int
+    var name: String
+    var image: String
+    var soundFile: String
+    
+    var audioPlayer: AudioPlayer?
+    
+    init(id: Int, name: String, image: String, soundFile: String) {
+        self.id = id
+        self.name = name
+        self.image = image
+        self.soundFile = soundFile
         
+        guard let url = Bundle.main.url(forResource: soundFile, withExtension: nil) else {return}
         do {
             let audioFile = try AVAudioFile(forReading: url)
-            soundSource = AudioPlayer(file: audioFile)
-            soundSource?.isLooping = true
-            soundSource?.volume = 0
-            print("\(name) volume zero")
-            
+            audioPlayer = AudioPlayer(file: audioFile, buffered: true)
+            audioPlayer?.isLooping = true
+            audioPlayer?.volume = 0
+            print("\(name) loaded")
         } catch {
-            Log("Could not load: $fileName")
+            Log("Could not load: \(soundFile)")
         }
     }
     
-    func setVolume(vol: Float) {
-        print("\(name) wanna set vol: \(vol) ")
-        soundSource?.volume = vol
-        print("\(name) vol: \(String(describing: soundSource?.volume)) ")
+    func attachTo(mixer: Mixer) {
+        mixer.addInput(audioPlayer!)
     }
     
-    func getSource() -> Node? {
-        return soundSource
+    func setVolume(vol: Float)  {
+        audioPlayer?.volume = vol
     }
     
     func play() {
-        soundSource?.play()
+        audioPlayer?.play()
         print("\(name) playing")
     }
     
     func stop() {
-        soundSource?.stop()
+        audioPlayer?.stop()
         print("\(name) stopped")
         
     }
 }
+

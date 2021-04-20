@@ -9,12 +9,17 @@ import SwiftUI
 import AudioKit
 
 struct PlayerComponent: View {
-    var soundSource: SoundSource
+    var soundSource: SampledSoundSource
     @State private var volume: Float = 0.0
+    
+    init(soundSource: SampledSoundSource, mixer: Mixer) {
+        self.soundSource = soundSource
+        self.soundSource.play()
+    }
     
     var body: some View {
         VStack(alignment: .center) {
-            Image(soundSource.name)
+            Image(soundSource.image)
                 .resizable()
                 .frame(width: 70, height: 70)
                 .padding(.top)
@@ -42,8 +47,8 @@ struct PlayerComponent: View {
     }
 }
 
-struct PlayerComponent_Previews: PreviewProvider {
-    static var previews: some View {
-        PlayerComponent(soundSource: SampledSoundSource(fileName: "Rain.wav"))
-    }
-}
+//struct PlayerComponent_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlayerComponent(soundSource: SampledSoundSource(fileName: "Rain.wav"))
+//    }
+//}
