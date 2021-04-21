@@ -61,10 +61,11 @@ func loadSampledSoundSources() -> [SampledSoundSource] {
         var arr: [SampledSoundSource] = []
         
         jsonData.forEach {
-            arr.append(SampledSoundSource(id: $0["id"] as! Int,
+            arr.append(SampledSoundSource(id: arr.count,
                                           name: $0["name"] as! String,
                                           image: $0["image"] as! String,
-                                          soundFile: $0["soundFile"] as! String))
+                                          soundFile: $0["soundFile"] as! String,
+                                          category: $0["category"] as! String))
         }
         
         return arr

@@ -12,20 +12,41 @@ class Player: ObservableObject {
     var shared: SharedData
     var activeSources: [SampledSoundSource] = []
     var inactiveSources: [SampledSoundSource] = []
+    var category: String = ""
     
-    public init(shared: SharedData, activeSourcesIDs: [Int] = [0,1], activeSourcesVolumes: [Float] = [0.9,0.25]) {
+    public init(shared: SharedData, activeSourcesIDs: [Int] = [], activeSourcesVolumes: [Float] = []) {
         self.shared = shared
         
         activeSourcesIDs.forEach { sourceID in
             addSource(sourceID: sourceID)
         }
         
-        for i in 0...activeSources.count-1 {
-            activeSources[i].setVolume(vol: activeSourcesVolumes[i])
+        for i in 0..<activeSources.count {
+            if (activeSourcesVolumes.count > i) {
+                activeSources[i].setVolume(vol: activeSourcesVolumes[i])
+            }
+            else {
+                break;
+            }
         }
         
         shared.soundSources.forEach { source in
             if activeSourcesIDs.doesNotContain(source.id) {
+                inactiveSources.append(source)
+            }
+        }
+    }
+    
+    public init(shared: SharedData, category: String) {
+        self.shared = shared
+        
+        self.category = category
+        
+        shared.soundSources.forEach { source in
+            if source.category == category {
+                activeSources.append(source)
+            }
+            else {
                 inactiveSources.append(source)
             }
         }
@@ -38,6 +59,7 @@ class Player: ObservableObject {
             }
         }
         self.activeSources.append(shared.soundSources[sourceID])
+        self.activeSources.last?.setVolume(vol: 0)
         self.inactiveSources.removeAll(where: { $0.id == sourceID })
         objectWillChange.send()
     }
@@ -47,6 +69,7 @@ class Player: ObservableObject {
             if (source.id == sourceID) {
                 source.stop()
                 inactiveSources.append(source)
+                inactiveSources.sort(by: <)
             }
         }
         activeSources.removeAll(where: { $0.id == sourceID })

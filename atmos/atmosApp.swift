@@ -13,7 +13,7 @@ struct atmosApp: App {
 
     var body: some Scene {
         WindowGroup {
-            PlayerView(player: Player(shared: shared))
+            ContentView()
         }
     }
 }

@@ -82,6 +82,7 @@
 		10124337262ABC4000D0861F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				10E4A481262AB89600D8B372 /* ContentView.swift */,
 				10124339262AC46800D0861F /* Player */,
 			);
 			path = View;
@@ -157,7 +158,6 @@
 				1012433E262AC4D500D0861F /* Model */,
 				10124337262ABC4000D0861F /* View */,
 				10E4A47F262AB89600D8B372 /* atmosApp.swift */,
-				10E4A481262AB89600D8B372 /* ContentView.swift */,
 				10E4A483262AB89700D8B372 /* Assets.xcassets */,
 				10E4A488262AB89700D8B372 /* Persistence.swift */,
 				10E4A48D262AB89700D8B372 /* Info.plist */,
