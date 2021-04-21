@@ -10,9 +10,9 @@ import AudioKit
 
 struct PlayerComponent: View {
     var soundSource: SampledSoundSource
-    @State private var volume: Float = 0.0
+    @State private var volume: Float = 1.0
     
-    init(soundSource: SampledSoundSource, mixer: Mixer) {
+    init(soundSource: SampledSoundSource) {
         self.soundSource = soundSource
         self.soundSource.play()
     }
@@ -38,17 +38,13 @@ struct PlayerComponent: View {
                 .onChange(of: volume, perform: { value in
                     soundSource.setVolume(vol: volume)
                 })
-            
+                .onAppear { self.volume = self.soundSource.getVolume() }
         }
-        .overlay(
-            RoundedRectangle(cornerRadius: 15.0)
-                .stroke(lineWidth: 2.0)
-        )
     }
 }
 
-//struct PlayerComponent_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlayerComponent(soundSource: SampledSoundSource(fileName: "Rain.wav"))
-//    }
-//}
+struct PlayerComponent_Previews: PreviewProvider {
+    static var previews: some View {
+        PlayerComponent(soundSource: SampledSoundSource(name: "Rain", image: "Rain", soundFile: "Rain.wav"))
+    }
+}

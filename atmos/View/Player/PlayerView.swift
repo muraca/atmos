@@ -9,22 +9,49 @@ import SwiftUI
 import AudioKit
 
 struct PlayerView: View {
-    @EnvironmentObject var shared: SharedData
+    @StateObject var player: Player
+    
     
     var body: some View {
-        ScrollView (.horizontal) {
-            HStack {
-                ForEach(shared.soundSources) { source in
-                    PlayerComponent(soundSource: source, mixer: shared.mixer)
+        VStack {
+            Menu {
+                ForEach(self.player.inactiveSources) { source in
+                    Button(source.name, action: { self.player.addSource(sourceID: source.id) })
                 }
+            } label: {
+                Label("Add source", systemImage: "plus")
             }
-            .padding()
+            
+            ScrollView (.horizontal) {
+                HStack {
+                    ForEach(self.player.activeSources) { source in
+                        VStack(alignment: .center) {
+                            Button(action: {
+                                self.player.removeSource(sourceID: source.id)
+                            }) {
+                                Circle()
+                                    .strokeBorder(Color.red, lineWidth: 1)
+                                    .background(Image(systemName: "xmark").foregroundColor(.red))
+                                    .frame(width: 30, height: 30)
+                            }
+                            .padding(.top, 10.0)
+                            
+                            PlayerComponent(soundSource: source)
+                        }
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15.0)
+                                .stroke(lineWidth: 2.0)
+                        )
+                    }
+                }
+                .padding()
+            }
         }
     }
 }
 
 struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerView()
+        PlayerView(player: Player(shared: SharedData()))
     }
 }

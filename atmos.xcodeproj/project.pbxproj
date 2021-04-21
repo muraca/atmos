@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1012433B262AC48100D0861F /* PlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1012433A262AC48100D0861F /* PlayerComponent.swift */; };
 		10124344262AC6FF00D0861F /* SampledSoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10124343262AC6FF00D0861F /* SampledSoundSource.swift */; };
+		10394FF5262ED22600D23305 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10394FF4262ED22600D23305 /* Player.swift */; };
 		103FDD7D262DC6790056A7E3 /* Bubbles.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD7C262DC6790056A7E3 /* Bubbles.wav */; };
 		103FDD84262DC8850056A7E3 /* Birds.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD83262DC8850056A7E3 /* Birds.wav */; };
 		103FDD87262DCA4B0056A7E3 /* Raft.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD86262DCA4A0056A7E3 /* Raft.wav */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		1012433A262AC48100D0861F /* PlayerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerComponent.swift; sourceTree = "<group>"; };
 		10124343262AC6FF00D0861F /* SampledSoundSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampledSoundSource.swift; sourceTree = "<group>"; };
+		10394FF4262ED22600D23305 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		103FDD7C262DC6790056A7E3 /* Bubbles.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bubbles.wav; sourceTree = "<group>"; };
 		103FDD83262DC8850056A7E3 /* Birds.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Birds.wav; sourceTree = "<group>"; };
 		103FDD86262DCA4A0056A7E3 /* Raft.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Raft.wav; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				10124343262AC6FF00D0861F /* SampledSoundSource.swift */,
 				103FDDA3262DD97A0056A7E3 /* SharedData.swift */,
+				10394FF4262ED22600D23305 /* Player.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				1080C6B6262B6FA7004BEDB6 /* PlayerView.swift in Sources */,
 				10E4A482262AB89600D8B372 /* ContentView.swift in Sources */,
 				10E4A48C262AB89700D8B372 /* atmos.xcdatamodeld in Sources */,
+				10394FF5262ED22600D23305 /* Player.swift in Sources */,
 				10E4A480262AB89600D8B372 /* atmosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

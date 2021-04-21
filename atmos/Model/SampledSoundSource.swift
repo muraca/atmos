@@ -51,6 +51,10 @@ class SampledSoundSource: Hashable, Identifiable {
         audioPlayer?.volume = vol
     }
     
+    func getVolume() -> Float {
+        return audioPlayer?.volume ?? 0
+    }
+    
     func play() {
         audioPlayer?.play()
         print("\(name) playing")

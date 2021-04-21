@@ -13,10 +13,7 @@ struct atmosApp: App {
 
     var body: some Scene {
         WindowGroup {
-            PlayerView()
-                .environmentObject(shared)
-//            ContentView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            PlayerView(player: Player(shared: shared))
         }
     }
 }
