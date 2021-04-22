@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1012433B262AC48100D0861F /* PlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1012433A262AC48100D0861F /* PlayerComponent.swift */; };
 		10124344262AC6FF00D0861F /* SampledSoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10124343262AC6FF00D0861F /* SampledSoundSource.swift */; };
+		103635DC26316B7C0034C064 /* Crickets.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103635DB26316B7C0034C064 /* Crickets.wav */; };
+		103635DF26316D380034C064 /* Frog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103635DE26316D380034C064 /* Frog.wav */; };
+		103635E226316E4E0034C064 /* Wolf.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103635E126316E4E0034C064 /* Wolf.wav */; };
+		103635E5263173900034C064 /* Jungle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103635E4263173900034C064 /* Jungle.wav */; };
 		10394FF5262ED22600D23305 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10394FF4262ED22600D23305 /* Player.swift */; };
 		103FDD7D262DC6790056A7E3 /* Bubbles.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD7C262DC6790056A7E3 /* Bubbles.wav */; };
 		103FDD84262DC8850056A7E3 /* Birds.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD83262DC8850056A7E3 /* Birds.wav */; };
@@ -39,6 +43,10 @@
 /* Begin PBXFileReference section */
 		1012433A262AC48100D0861F /* PlayerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerComponent.swift; sourceTree = "<group>"; };
 		10124343262AC6FF00D0861F /* SampledSoundSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampledSoundSource.swift; sourceTree = "<group>"; };
+		103635DB26316B7C0034C064 /* Crickets.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Crickets.wav; sourceTree = "<group>"; };
+		103635DE26316D380034C064 /* Frog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Frog.wav; sourceTree = "<group>"; };
+		103635E126316E4E0034C064 /* Wolf.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wolf.wav; sourceTree = "<group>"; };
+		103635E4263173900034C064 /* Jungle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jungle.wav; sourceTree = "<group>"; };
 		10394FF4262ED22600D23305 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		103FDD7C262DC6790056A7E3 /* Bubbles.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bubbles.wav; sourceTree = "<group>"; };
 		103FDD83262DC8850056A7E3 /* Birds.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Birds.wav; sourceTree = "<group>"; };
@@ -121,7 +129,10 @@
 				103FDD96262DD10E0056A7E3 /* Beach.wav */,
 				103FDD83262DC8850056A7E3 /* Birds.wav */,
 				103FDD7C262DC6790056A7E3 /* Bubbles.wav */,
+				103635DB26316B7C0034C064 /* Crickets.wav */,
 				103FDD8D262DCD360056A7E3 /* Fire.wav */,
+				103635DE26316D380034C064 /* Frog.wav */,
+				103635E4263173900034C064 /* Jungle.wav */,
 				103FDD86262DCA4A0056A7E3 /* Raft.wav */,
 				1080A6EC262AE9CC006EB381 /* Rain.wav */,
 				103FDD90262DCDA10056A7E3 /* Seagulls.wav */,
@@ -132,6 +143,7 @@
 				103FDD93262DCDFB0056A7E3 /* WaterTap.wav */,
 				103FDD99262DD1850056A7E3 /* Waves.wav */,
 				103FDD8A262DCC580056A7E3 /* Wind.wav */,
+				103635E126316E4E0034C064 /* Wolf.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -240,13 +252,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				103635DC26316B7C0034C064 /* Crickets.wav in Resources */,
 				1080A6F1262AE9CD006EB381 /* Thunderstorm1.wav in Resources */,
 				103FDD87262DCA4B0056A7E3 /* Raft.wav in Resources */,
+				103635E5263173900034C064 /* Jungle.wav in Resources */,
 				1080A6F2262AE9CD006EB381 /* Rain.wav in Resources */,
 				1080A6EE262AE9CD006EB381 /* Thunderstorm2.wav in Resources */,
 				103FDD97262DD10E0056A7E3 /* Beach.wav in Resources */,
 				103FDD8B262DCC580056A7E3 /* Wind.wav in Resources */,
 				103FDD7D262DC6790056A7E3 /* Bubbles.wav in Resources */,
+				103635DF26316D380034C064 /* Frog.wav in Resources */,
 				10E4A487262AB89700D8B372 /* Preview Assets.xcassets in Resources */,
 				103FDD94262DCDFB0056A7E3 /* WaterTap.wav in Resources */,
 				1080A6F3262AE9CD006EB381 /* Storm1.wav in Resources */,
@@ -254,6 +269,7 @@
 				103FDDA0262DD7070056A7E3 /* SampledSoundSources.json in Resources */,
 				103FDD9A262DD1850056A7E3 /* Waves.wav in Resources */,
 				10E4A484262AB89700D8B372 /* Assets.xcassets in Resources */,
+				103635E226316E4E0034C064 /* Wolf.wav in Resources */,
 				103FDD91262DCDA10056A7E3 /* Seagulls.wav in Resources */,
 				103FDD8E262DCD360056A7E3 /* Fire.wav in Resources */,
 				1080A6F0262AE9CD006EB381 /* Storm2.wav in Resources */,

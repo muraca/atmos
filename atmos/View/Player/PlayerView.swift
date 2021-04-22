@@ -27,7 +27,7 @@ var categoryColor: [String:Color] = [
     "Nature" : .green,
     "Weather" : .gray,
     "Binaural" : .purple,
-    "" : .white
+    "" : .black
 ]
 
 struct PlayerView: View {
@@ -39,6 +39,8 @@ struct PlayerView: View {
                 HStack {
                     Text("Custom preset")
                         .font(.title)
+                        .bold()
+                        .foregroundColor(categoryColor[self.player.category])
                     
                     Spacer()
                     
@@ -61,8 +63,15 @@ struct PlayerView: View {
                 }
             }
             else {
-                Text(self.player.category)
-                    .font(.title)
+                HStack {
+                    Text(self.player.category)
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(categoryColor[self.player.category])
+                    
+                    Spacer()
+                }
+                .padding()
             }
             
             ScrollView (.vertical) {

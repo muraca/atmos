@@ -18,9 +18,27 @@
         "category" : "Sea",
     },
     {
+        "name" : "Crickets",
+        "image" : "Crickets",
+        "soundFile" : "Crickets.wav",
+        "category" : "Nature",
+    },
+    {
         "name" : "Fire",
         "image" : "Fire",
         "soundFile" : "Fire.wav",
+        "category" : "Nature",
+    },
+    {
+        "name" : "Frog",
+        "image" : "Frog",
+        "soundFile" : "Frog.wav",
+        "category" : "Nature",
+    },
+    {
+        "name" : "Jungle",
+        "image" : "Jungle",
+        "soundFile" : "Jungle.wav",
         "category" : "Nature",
     },
     {
@@ -82,5 +100,11 @@
         "image" : "Wind",
         "soundFile" : "Wind.wav",
         "category" : "Weather",
+    },
+    {
+        "name" : "Wolf",
+        "image" : "Wolf",
+        "soundFile" : "Wolf.wav",
+        "category" : "Nature",
     },
 ]
