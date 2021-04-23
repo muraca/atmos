@@ -9,7 +9,7 @@ import Foundation
 import AudioKit
 import AVFoundation
 
-class SampledSoundSource: Hashable, Identifiable, Comparable {
+class SampledSoundSource: SoundSource {
     static func < (lhs: SampledSoundSource, rhs: SampledSoundSource) -> Bool {
         return lhs.id < rhs.id
     }
@@ -25,8 +25,10 @@ class SampledSoundSource: Hashable, Identifiable, Comparable {
     var id: Int
     var name: String
     var image: String
-    var soundFile: String
     var category: String
+    var soundFile: String
+    
+    @Published var volume: Float = 0
     
     var audioPlayer: AudioPlayer?
     
@@ -34,15 +36,15 @@ class SampledSoundSource: Hashable, Identifiable, Comparable {
         self.id = id
         self.name = name
         self.image = image
-        self.soundFile = soundFile
         self.category = category
+        self.soundFile = soundFile
         
         guard let url = Bundle.main.url(forResource: soundFile, withExtension: nil) else {return}
         do {
             let audioFile = try AVAudioFile(forReading: url)
             audioPlayer = AudioPlayer(file: audioFile, buffered: true)
             audioPlayer?.isLooping = true
-            audioPlayer?.volume = 0
+            audioPlayer?.volume = volume
         } catch {
             Log("Could not load: \(soundFile)")
         }
@@ -53,11 +55,15 @@ class SampledSoundSource: Hashable, Identifiable, Comparable {
     }
     
     func setVolume(vol: Float)  {
-        audioPlayer?.volume = vol
+        if (audioPlayer?.volume != vol) {
+            volume = vol
+            audioPlayer?.volume = vol
+//            objectWillChange.send()
+        }
     }
     
     func getVolume() -> Float {
-        return audioPlayer?.volume ?? 0
+        return volume
     }
     
     func play() {

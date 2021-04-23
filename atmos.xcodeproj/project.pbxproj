@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		1012433B262AC48100D0861F /* PlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1012433A262AC48100D0861F /* PlayerComponent.swift */; };
 		10124344262AC6FF00D0861F /* SampledSoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10124343262AC6FF00D0861F /* SampledSoundSource.swift */; };
+		10327C762632D07D00C707F1 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10327C752632D07D00C707F1 /* Categories.swift */; };
+		10327C7B263305C700C707F1 /* SoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10327C7A263305C700C707F1 /* SoundSource.swift */; };
 		103635DC26316B7C0034C064 /* Crickets.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103635DB26316B7C0034C064 /* Crickets.wav */; };
 		103635DF26316D380034C064 /* Frog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103635DE26316D380034C064 /* Frog.wav */; };
 		103635E226316E4E0034C064 /* Wolf.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103635E126316E4E0034C064 /* Wolf.wav */; };
 		103635E5263173900034C064 /* Jungle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103635E4263173900034C064 /* Jungle.wav */; };
-		10394FF5262ED22600D23305 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10394FF4262ED22600D23305 /* Player.swift */; };
+		103635E826317CC70034C064 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103635E726317CC70034C064 /* UserView.swift */; };
 		103FDD7D262DC6790056A7E3 /* Bubbles.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD7C262DC6790056A7E3 /* Bubbles.wav */; };
 		103FDD84262DC8850056A7E3 /* Birds.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD83262DC8850056A7E3 /* Birds.wav */; };
 		103FDD87262DCA4B0056A7E3 /* Raft.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD86262DCA4A0056A7E3 /* Raft.wav */; };
@@ -31,7 +33,7 @@
 		1080A6F1262AE9CD006EB381 /* Thunderstorm1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6EB262AE9CC006EB381 /* Thunderstorm1.wav */; };
 		1080A6F2262AE9CD006EB381 /* Rain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6EC262AE9CC006EB381 /* Rain.wav */; };
 		1080A6F3262AE9CD006EB381 /* Storm1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6ED262AE9CD006EB381 /* Storm1.wav */; };
-		1080C6B6262B6FA7004BEDB6 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1080C6B5262B6FA7004BEDB6 /* PlayerView.swift */; };
+		1080C6B6262B6FA7004BEDB6 /* SamplePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1080C6B5262B6FA7004BEDB6 /* SamplePlayerView.swift */; };
 		10E4A480262AB89600D8B372 /* atmosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E4A47F262AB89600D8B372 /* atmosApp.swift */; };
 		10E4A482262AB89600D8B372 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E4A481262AB89600D8B372 /* ContentView.swift */; };
 		10E4A484262AB89700D8B372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E4A483262AB89700D8B372 /* Assets.xcassets */; };
@@ -43,11 +45,13 @@
 /* Begin PBXFileReference section */
 		1012433A262AC48100D0861F /* PlayerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerComponent.swift; sourceTree = "<group>"; };
 		10124343262AC6FF00D0861F /* SampledSoundSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampledSoundSource.swift; sourceTree = "<group>"; };
+		10327C752632D07D00C707F1 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		10327C7A263305C700C707F1 /* SoundSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSource.swift; sourceTree = "<group>"; };
 		103635DB26316B7C0034C064 /* Crickets.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Crickets.wav; sourceTree = "<group>"; };
 		103635DE26316D380034C064 /* Frog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Frog.wav; sourceTree = "<group>"; };
 		103635E126316E4E0034C064 /* Wolf.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wolf.wav; sourceTree = "<group>"; };
 		103635E4263173900034C064 /* Jungle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jungle.wav; sourceTree = "<group>"; };
-		10394FF4262ED22600D23305 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		103635E726317CC70034C064 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		103FDD7C262DC6790056A7E3 /* Bubbles.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bubbles.wav; sourceTree = "<group>"; };
 		103FDD83262DC8850056A7E3 /* Birds.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Birds.wav; sourceTree = "<group>"; };
 		103FDD86262DCA4A0056A7E3 /* Raft.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Raft.wav; sourceTree = "<group>"; };
@@ -64,7 +68,7 @@
 		1080A6EB262AE9CC006EB381 /* Thunderstorm1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Thunderstorm1.wav; sourceTree = "<group>"; };
 		1080A6EC262AE9CC006EB381 /* Rain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Rain.wav; sourceTree = "<group>"; };
 		1080A6ED262AE9CD006EB381 /* Storm1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Storm1.wav; sourceTree = "<group>"; };
-		1080C6B5262B6FA7004BEDB6 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		1080C6B5262B6FA7004BEDB6 /* SamplePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePlayerView.swift; sourceTree = "<group>"; };
 		10E4A47C262AB89600D8B372 /* atmos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = atmos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E4A47F262AB89600D8B372 /* atmosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atmosApp.swift; sourceTree = "<group>"; };
 		10E4A481262AB89600D8B372 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				10E4A481262AB89600D8B372 /* ContentView.swift */,
+				103635E726317CC70034C064 /* UserView.swift */,
 				10124339262AC46800D0861F /* Player */,
 			);
 			path = View;
@@ -100,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				1012433A262AC48100D0861F /* PlayerComponent.swift */,
-				1080C6B5262B6FA7004BEDB6 /* PlayerView.swift */,
+				1080C6B5262B6FA7004BEDB6 /* SamplePlayerView.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -108,9 +113,10 @@
 		1012433E262AC4D500D0861F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				10124343262AC6FF00D0861F /* SampledSoundSource.swift */,
+				10327C752632D07D00C707F1 /* Categories.swift */,
 				103FDDA3262DD97A0056A7E3 /* SharedData.swift */,
-				10394FF4262ED22600D23305 /* Player.swift */,
+				10327C7A263305C700C707F1 /* SoundSource.swift */,
+				10124343262AC6FF00D0861F /* SampledSoundSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,10 +293,12 @@
 				1012433B262AC48100D0861F /* PlayerComponent.swift in Sources */,
 				103FDDA4262DD97A0056A7E3 /* SharedData.swift in Sources */,
 				10124344262AC6FF00D0861F /* SampledSoundSource.swift in Sources */,
-				1080C6B6262B6FA7004BEDB6 /* PlayerView.swift in Sources */,
+				1080C6B6262B6FA7004BEDB6 /* SamplePlayerView.swift in Sources */,
 				10E4A482262AB89600D8B372 /* ContentView.swift in Sources */,
+				10327C762632D07D00C707F1 /* Categories.swift in Sources */,
 				10E4A48C262AB89700D8B372 /* atmos.xcdatamodeld in Sources */,
-				10394FF5262ED22600D23305 /* Player.swift in Sources */,
+				103635E826317CC70034C064 /* UserView.swift in Sources */,
+				10327C7B263305C700C707F1 /* SoundSource.swift in Sources */,
 				10E4A480262AB89600D8B372 /* atmosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +437,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.muraca.atmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,6 +461,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.muraca.atmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";

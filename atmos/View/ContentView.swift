@@ -8,27 +8,49 @@
 import SwiftUI
 
 struct ContentView: View {
-    var shared: SharedData
-    var player: Player
-    
-    init() {
-        self.shared = SharedData()
-        self.player = Player(shared: self.shared)
-    }
+    var shared: SharedData = SharedData()
     
     var body: some View {
         TabView {
-            ForEach(categories, id: \.self) { c in
-                PlayerView(player: Player(shared: shared, category: c))
-                    .navigationTitle(c)
-                    .tabItem({
-                        Image(systemName: categoryIcon[c]!)
-                            .foregroundColor(categoryColor[c])
+            ForEach(sampleCategories, id: \.self) { c in
+                VStack {
+                    HStack {
                         Text(c)
-                            .font(.subheadline)
-                            
-                    })
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(categoryColor[c]!)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            shared.mute()
+                        }, label: {
+                            Image(systemName: "speaker.slash.fill")
+                                .font(.title)
+                                .foregroundColor(categoryColor[c]!)
+                        })
+                    }
+                    .padding()
+                SamplePlayerView(category: c, sampledSoundSources: shared.sampledSoundSources[c]!)
+                    
+                }
+                .navigationTitle(c)
+                .tabItem({
+                    Image(systemName: categoryIcon[c]!)
+                        .foregroundColor(categoryColor[c])
+                    Text(c)
+                        .font(.subheadline)
+                })
+                
             }
+            UserView(shared: shared)
+                .navigationTitle("Hello, \(shared.username)!")
+                .tabItem({
+                    Image(systemName: "person")
+                        .foregroundColor(.black)
+                    Text(shared.username.titleCase())
+                        .font(.subheadline)
+                })
         }
     }
 }

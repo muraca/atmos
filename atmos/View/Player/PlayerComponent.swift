@@ -8,38 +8,41 @@
 import SwiftUI
 import AudioKit
 
-struct PlayerComponent: View {
-    var soundSource: SampledSoundSource
-    @State private var volume: Float = 1.0
+struct PlayerComponent<T: SoundSource>: View {
+    @ObservedObject var soundSource: T
+//    @State private var volume: Float = 1.0
     
-    init(soundSource: SampledSoundSource) {
+    init(soundSource: T) {
         self.soundSource = soundSource
         self.soundSource.play()
     }
     
     var body: some View {
-            VStack(alignment: .center) {
-                HStack {
-                    Image(soundSource.image)
-                        .resizable()
-                        .frame(width: 70, height: 70)
-                        .colorInvert()
-                    
-                    Slider(value: $volume, in: 0.0...1.0)
-                        .onChange(of: volume, perform: { value in
-                            soundSource.setVolume(vol: volume)
-                        })
-                        .onAppear { self.volume = self.soundSource.getVolume()
-                        }
-                        .padding(.horizontal, 10)
-                        .accentColor(.white)
-                }
-                .padding(.vertical, 30)
-            }
+        HStack {
+            Image(soundSource.image)
+                .resizable()
+                .frame(width: 70, height: 70)
+                .colorInvert()
+            
+            Slider(value: $soundSource.volume, in: 0.0...1.0)
+                .onChange(of: soundSource.volume, perform: { value in
+                    soundSource.setVolume(vol: value)
+                })
+//                .onAppear { self.volume = self.soundSource.getVolume() }
+                .padding(.leading, 10)
+                .accentColor(.white)
+            
+            Image(systemName: categoryIcon[self.soundSource.category]!)
+                .foregroundColor(.white)
+                .font(.title)
+        }
+        .padding(.vertical, 20)
+        .padding(.horizontal, 20)
+        .background(categoryColor[self.soundSource.category]!)
     }
 }
 
-struct PlayerComponent_Previews: PreviewProvider {
+struct SamplePlayerComponent_Previews: PreviewProvider {
     static var previews: some View {
         PlayerComponent(soundSource: SampledSoundSource(id: 5, name: "Rain", image: "Rain", soundFile: "Rain.wav"))
     }

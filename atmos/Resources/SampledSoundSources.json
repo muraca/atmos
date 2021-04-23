@@ -3,7 +3,7 @@
         "name" : "Beach",
         "image" : "Beach",
         "soundFile" : "Beach.wav",
-        "category" : "Sea",
+        "category" : "Water",
     },
     {
         "name" : "Birds",
@@ -15,7 +15,7 @@
         "name" : "Bubbles",
         "image" : "Bubbles",
         "soundFile" : "Bubbles.wav",
-        "category" : "Sea",
+        "category" : "Water",
     },
     {
         "name" : "Crickets",
@@ -45,7 +45,7 @@
         "name" : "Raft",
         "image" : "Raft",
         "soundFile" : "Raft.wav",
-        "category" : "Sea",
+        "category" : "Water",
     },
     {
         "name" : "Rain",
@@ -57,7 +57,7 @@
         "name" : "Seagulls",
         "image" : "Seagulls",
         "soundFile" : "Seagulls.wav",
-        "category" : "Sea",
+        "category" : "Water",
     },
     {
         "name" : "Storm 1",
@@ -87,13 +87,13 @@
         "name" : "Water Tap",
         "image" : "WaterTap",
         "soundFile" : "WaterTap.wav",
-        "category" : "Sea",
+        "category" : "Water",
     },
     {
         "name" : "Waves",
         "image" : "Waves",
         "soundFile" : "Waves.wav",
-        "category" : "Sea",
+        "category" : "Water",
     },
     {
         "name" : "Wind",

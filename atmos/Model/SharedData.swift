@@ -12,7 +12,9 @@ import AudioKit
 final class SharedData: ObservableObject {
 //    @Published var persistenceController = PersistenceController.shared
     
-    var soundSources: [SampledSoundSource]
+    var username: String = "user"
+    
+    var sampledSoundSources: [String: [SampledSoundSource]]
     
     var engine: AudioEngine
     var mixer: Mixer
@@ -20,11 +22,11 @@ final class SharedData: ObservableObject {
     init() {
         engine = AudioEngine()
         mixer = Mixer()
-        soundSources = loadSampledSoundSources()
+        sampledSoundSources = loadSampledSoundSources()
         
         engine.output = mixer
         
-        print("\(soundSources.count) sources found")
+        print("\(sampledSoundSources.count) sources found")
         
         do {
             try engine.start()
@@ -34,13 +36,39 @@ final class SharedData: ObservableObject {
             fatalError("can't start engine")
         }
         
-        soundSources.forEach { source in
-            source.attachTo(mixer: mixer)
+        for (_, sources) in sampledSoundSources {
+            for source in sources {
+                source.attachTo(mixer: mixer)
+            }
+        }
+    }
+    
+    func mute() {
+        for (_, sources) in sampledSoundSources {
+            for source in sources {
+                source.setVolume(vol: 0)
+            }
+        }
+    }
+    
+    func play() {
+        for (_, sources) in sampledSoundSources {
+            for source in sources {
+                source.play()
+            }
+        }
+    }
+    
+    func stop() {
+        for (_, sources) in sampledSoundSources {
+            for source in sources {
+                source.stop()
+            }
         }
     }
 }
 
-func loadSampledSoundSources() -> [SampledSoundSource] {
+func loadSampledSoundSources() -> [String: [SampledSoundSource]] {
     let data: Data
     guard let file = Bundle.main.url(forResource: "SampledSoundSources.json", withExtension: nil)
     else {
@@ -58,17 +86,24 @@ func loadSampledSoundSources() -> [SampledSoundSource] {
     do {
         jsonData = try (JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String:Any]])!
         
-        var arr: [SampledSoundSource] = []
-        
+        var map: [String: [SampledSoundSource]] = [:]
+        var count = 1
         jsonData.forEach {
-            arr.append(SampledSoundSource(id: arr.count,
-                                          name: $0["name"] as! String,
-                                          image: $0["image"] as! String,
-                                          soundFile: $0["soundFile"] as! String,
-                                          category: $0["category"] as! String))
+            let new = SampledSoundSource(id: count,
+                                         name: $0["name"] as! String,
+                                         image: $0["image"] as! String,
+                                         soundFile: $0["soundFile"] as! String,
+                                         category: $0["category"] as! String)
+            
+            if map[$0["category"] as! String] == nil {
+                map[$0["category"] as! String] = []
+            }
+            map[$0["category"] as! String]?.append(new)
+            
+            count += 1
         }
         
-        return arr
+        return map
     } catch {
         fatalError("Couldn't parse SampleSoundSources.json\n\(error)")
     }
