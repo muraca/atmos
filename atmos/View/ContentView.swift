@@ -23,22 +23,37 @@ struct ContentView: View {
                     Spacer()
                 }
                 .navigationTitle(c)
-                .tabItem({TabItem(icon: categoryIcon[c]!, color: categoryColor[c]!, title: c)})
+                .tabItem({TabItem(icon: categoryIcon[c]!, title: c)})
                 
             }
             
-            ForEach(singleSynthCategories, id: \.self) { c in
-                VStack {
-                    TitleBar(text: c, color: categoryColor[c]!)
-                        .environmentObject(shared)
+            VStack {
+                TitleBar(text: "Waves")
+                    .environmentObject(shared)
+                
+                Text("Binaural")
+                    .font(.title)
+                    .foregroundColor(categoryColor["Binaural"]!)
+                
+                SinglePlayerView(category: "Binaural",
+                                 soundSources: shared.synthesizedSoundSources["Binaural"]!)
+                
+                Spacer()
+                
+                Divider()
+                    .frame(width: 0.0, height: 10.0)
                     
-                    SinglePlayerView(category: c,
-                                     soundSources: shared.synthesizedSoundSources[c]!)
-                    Spacer()
-                }
-                .navigationTitle(c)
-                .tabItem({TabItem(icon: categoryIcon[c]!, color: categoryColor[c]!, title: c)})
+                Text("Noises")
+                    .font(.title)
+                    .foregroundColor(.black)
+                
+                MultiplePlayerView(category: "Noise",
+                                   soundSources: shared.noiseSoundSources,
+                                   scrollable: false)
             }
+            .navigationTitle("Waves")
+            .tabItem({TabItem(icon: categoryIcon["Noise"]!, title: "Waves")})
+            
             VStack {
                 TitleBar(text: "Hello, \(shared.username)!")
                     .environmentObject(shared)

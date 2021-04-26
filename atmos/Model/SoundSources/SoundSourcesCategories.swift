@@ -22,7 +22,8 @@ var categoryIcon: [String:String] = [
     "Water" : "drop",
     "Weather" : "cloud.sun",
     "Nature" : "leaf",
-    "Binaural" : "waveform"
+    "Binaural" : "headphones",
+    "Noise" : "waveform"
 ]
 
 var categoryColor: [String:Color] = [
@@ -30,5 +31,8 @@ var categoryColor: [String:Color] = [
     "Nature" : .green,
     "Weather" : .gray,
     "Binaural" : .purple,
+    "White Noise" : .gray,
+    "Pink Noise" : .pink,
+    "Brown Noise" : .init(red: 0.64, green: 0.17, blue: 0.17),
     "" : .black
 ]

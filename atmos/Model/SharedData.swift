@@ -16,6 +16,7 @@ final class SharedData: ObservableObject {
     
     var sampledSoundSources: [String: [SampledSoundSource]]
     var synthesizedSoundSources: [String: [SynthesizedSoundSource]]
+    var noiseSoundSources: [NoiseSoundSource]
     
     var engine: AudioEngine
     var mixer: Mixer
@@ -25,6 +26,7 @@ final class SharedData: ObservableObject {
         mixer = Mixer()
         sampledSoundSources = loadSampledSoundSources()
         synthesizedSoundSources = loadSynthesizedSoundSources()
+        noiseSoundSources = loadNoiseSoundSources()
         
         engine.output = mixer
         
@@ -47,6 +49,10 @@ final class SharedData: ObservableObject {
                 source.attachTo(mixer: mixer)
             }
         }
+        
+        for source in noiseSoundSources {
+            source.attachTo(mixer: mixer)
+        }
     }
     
     func mute() {
@@ -60,6 +66,10 @@ final class SharedData: ObservableObject {
             for source in sources {
                 source.setVolume(vol: 0)
             }
+        }
+        
+        for source in noiseSoundSources {
+            source.setVolume(vol: 0)
         }
     }
     
@@ -75,6 +85,10 @@ final class SharedData: ObservableObject {
                 source.play()
             }
         }
+        
+        for source in noiseSoundSources {
+            source.play()
+        }
     }
     
     func stop() {
@@ -88,6 +102,10 @@ final class SharedData: ObservableObject {
             for source in sources {
                 source.stop()
             }
+        }
+        
+        for source in noiseSoundSources {
+            source.stop()
         }
     }
 }
@@ -182,4 +200,12 @@ func loadSynthesizedSoundSources() -> [String: [SynthesizedSoundSource]] {
     } catch {
         fatalError("Couldn't parse SynthesizedSoundSources.json\n\(error)")
     }
+}
+
+func loadNoiseSoundSources() -> [NoiseSoundSource] {
+    return [
+        NoiseSoundSource(id: 0, type: "White Noise", image: "SoundWave"),
+        NoiseSoundSource(id: 1, type: "Pink Noise", image: "SoundWave"),
+        NoiseSoundSource(id: 2, type: "Brown Noise", image: "SoundWave")
+    ]
 }

@@ -36,7 +36,9 @@ struct PlayerComponent<T: SoundSource>: View {
         }
         .padding(.vertical, 20)
         .padding(.horizontal, 20)
-        .background(categoryColor[self.soundSource.category]!)
+        .background(categoryColor[self.soundSource.category]
+                    ?? categoryColor[self.soundSource.name]
+                    ?? categoryColor[""]!)
     }
 }
 

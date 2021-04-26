@@ -16,6 +16,7 @@
 		103635E226316E4E0034C064 /* Wolf.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103635E126316E4E0034C064 /* Wolf.wav */; };
 		103635E5263173900034C064 /* Jungle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103635E4263173900034C064 /* Jungle.wav */; };
 		103635E826317CC70034C064 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103635E726317CC70034C064 /* UserView.swift */; };
+		1038F7412636D04200E0BB6F /* NoiseSoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038F7402636D04200E0BB6F /* NoiseSoundSource.swift */; };
 		103FDD7D262DC6790056A7E3 /* Bubbles.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD7C262DC6790056A7E3 /* Bubbles.wav */; };
 		103FDD84262DC8850056A7E3 /* Birds.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD83262DC8850056A7E3 /* Birds.wav */; };
 		103FDD87262DCA4B0056A7E3 /* Raft.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD86262DCA4A0056A7E3 /* Raft.wav */; };
@@ -57,6 +58,7 @@
 		103635E126316E4E0034C064 /* Wolf.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wolf.wav; sourceTree = "<group>"; };
 		103635E4263173900034C064 /* Jungle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jungle.wav; sourceTree = "<group>"; };
 		103635E726317CC70034C064 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		1038F7402636D04200E0BB6F /* NoiseSoundSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseSoundSource.swift; sourceTree = "<group>"; };
 		103FDD7C262DC6790056A7E3 /* Bubbles.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bubbles.wav; sourceTree = "<group>"; };
 		103FDD83262DC8850056A7E3 /* Birds.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Birds.wav; sourceTree = "<group>"; };
 		103FDD86262DCA4A0056A7E3 /* Raft.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Raft.wav; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				10327C7A263305C700C707F1 /* SoundSource.swift */,
 				10124343262AC6FF00D0861F /* SampledSoundSource.swift */,
 				10552E522636984000AF0C14 /* SynthesizedSoundSource.swift */,
+				1038F7402636D04200E0BB6F /* NoiseSoundSource.swift */,
 			);
 			path = SoundSources;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				10E4A482262AB89600D8B372 /* ContentView.swift in Sources */,
 				10327C762632D07D00C707F1 /* SoundSourcesCategories.swift in Sources */,
 				10552E5C2636AD0400AF0C14 /* TabItem.swift in Sources */,
+				1038F7412636D04200E0BB6F /* NoiseSoundSource.swift in Sources */,
 				10E4A48C262AB89700D8B372 /* atmos.xcdatamodeld in Sources */,
 				103635E826317CC70034C064 /* UserView.swift in Sources */,
 				10552E592636AC3800AF0C14 /* TitleBar.swift in Sources */,

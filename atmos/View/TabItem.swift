@@ -9,12 +9,10 @@ import SwiftUI
 
 struct TabItem: View {
     var icon: String = "xmark"
-    var color: Color = .black
     var title: String = "Title"
     
     var body: some View {
         Image(systemName: icon)
-            .foregroundColor(color)
         Text(title)
             .font(.subheadline)
     }

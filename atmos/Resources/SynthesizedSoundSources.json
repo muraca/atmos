@@ -1,7 +1,7 @@
 [
     {
         "name" : "20.1Hz Energy",
-        "image" : "Binaural",
+        "image" : "SoundWave",
         "oscillators" : [
             {
                 "frequency" : 136.7,
@@ -16,7 +16,7 @@
     },
     {
         "name" : "15.6Hz Focus",
-        "image" : "Binaural",
+        "image" : "SoundWave",
         "oscillators" : [
             {
                 "frequency" : 101.2,
@@ -31,7 +31,7 @@
     },
     {
         "name" : "10.9Hz Creativity",
-        "image" : "Binaural",
+        "image" : "SoundWave",
         "oscillators" : [
             {
                 "frequency" : 120.2,
@@ -46,7 +46,7 @@
     },
     {
         "name" : "6.1Hz Relax",
-        "image" : "Binaural",
+        "image" : "SoundWave",
         "oscillators" : [
             {
                 "frequency" : 81,
@@ -61,7 +61,7 @@
     },
     {
         "name" : "3.8Hz Sleep",
-        "image" : "Binaural",
+        "image" : "SoundWave",
         "oscillators" : [
             {
                 "frequency" : 84.3,
@@ -76,7 +76,7 @@
     },
     {
         "name" : "1.7Hz Lucid Dreaming",
-        "image" : "Binaural",
+        "image" : "SoundWave",
         "oscillators" : [
             {
                 "frequency" : 91.2,
