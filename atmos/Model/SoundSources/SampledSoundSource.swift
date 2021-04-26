@@ -55,10 +55,9 @@ class SampledSoundSource: SoundSource {
     }
     
     func setVolume(vol: Float)  {
-        if (audioPlayer?.volume != vol) {
+        if audioPlayer?.volume != vol {
             volume = vol
             audioPlayer?.volume = vol
-//            objectWillChange.send()
         }
     }
     

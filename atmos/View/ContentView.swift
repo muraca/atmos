@@ -14,43 +14,41 @@ struct ContentView: View {
         TabView {
             ForEach(sampleCategories, id: \.self) { c in
                 VStack {
-                    HStack {
-                        Text(c)
-                            .font(.title)
-                            .bold()
-                            .foregroundColor(categoryColor[c]!)
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            shared.mute()
-                        }, label: {
-                            Image(systemName: "speaker.slash.fill")
-                                .font(.title)
-                                .foregroundColor(categoryColor[c]!)
-                        })
-                    }
-                    .padding()
-                SamplePlayerView(category: c, sampledSoundSources: shared.sampledSoundSources[c]!)
+                    TitleBar(text: c, color: categoryColor[c]!)
+                        .environmentObject(shared)
                     
+                    SamplePlayerView(category: c,
+                                     sampledSoundSources: shared.sampledSoundSources[c]!)
+                    
+                    Spacer()
                 }
                 .navigationTitle(c)
-                .tabItem({
-                    Image(systemName: categoryIcon[c]!)
-                        .foregroundColor(categoryColor[c])
-                    Text(c)
-                        .font(.subheadline)
-                })
+                .tabItem({TabItem(icon: categoryIcon[c]!, color: categoryColor[c]!, title: c)})
                 
             }
-            UserView(shared: shared)
-                .navigationTitle("Hello, \(shared.username)!")
-                .tabItem({
-                    Image(systemName: "person")
-                        .foregroundColor(.black)
-                    Text(shared.username.titleCase())
-                        .font(.subheadline)
-                })
+            
+            ForEach(singleSynthCategories, id: \.self) { c in
+                VStack {
+                    TitleBar(text: c, color: categoryColor[c]!)
+                        .environmentObject(shared)
+                    
+                    SingleSynthesizedPlayerView(category: c,
+                                                synthesizedSoundSources: shared.synthesizedSoundSources[c]!)
+                    Spacer()
+                }
+                .navigationTitle(c)
+                .tabItem({TabItem(icon: categoryIcon[c]!, color: categoryColor[c]!, title: c)})
+            }
+            VStack {
+                TitleBar(text: "Hello, \(shared.username)!")
+                    .environmentObject(shared)
+                
+                UserView(shared: shared)
+                
+                Spacer()
+            }
+            .navigationTitle("User")
+            .tabItem({TabItem(icon: "person", title: "User")})
         }
     }
 }

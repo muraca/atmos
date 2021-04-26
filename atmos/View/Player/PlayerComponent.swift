@@ -10,7 +10,6 @@ import AudioKit
 
 struct PlayerComponent<T: SoundSource>: View {
     @ObservedObject var soundSource: T
-//    @State private var volume: Float = 1.0
     
     init(soundSource: T) {
         self.soundSource = soundSource
@@ -28,7 +27,6 @@ struct PlayerComponent<T: SoundSource>: View {
                 .onChange(of: soundSource.volume, perform: { value in
                     soundSource.setVolume(vol: value)
                 })
-//                .onAppear { self.volume = self.soundSource.getVolume() }
                 .padding(.leading, 10)
                 .accentColor(.white)
             

@@ -1,0 +1,100 @@
+[
+    {
+        "name" : "20.1Hz Energy",
+        "image" : "Binaural",
+        "oscillators" : [
+            {
+                "frequency" : 136.7,
+                "panning" : 0,
+            },
+            {
+                "frequency" : 116.6,
+                "panning" : 1,
+            },
+        ],
+        "category" : "Binaural",
+    },
+    {
+        "name" : "15.6Hz Focus",
+        "image" : "Binaural",
+        "oscillators" : [
+            {
+                "frequency" : 101.2,
+                "panning" : 0,
+            },
+            {
+                "frequency" : 116.8,
+                "panning" : 1,
+            },
+        ],
+        "category" : "Binaural",
+    },
+    {
+        "name" : "10.9Hz Creativity",
+        "image" : "Binaural",
+        "oscillators" : [
+            {
+                "frequency" : 120.2,
+                "panning" : 0,
+            },
+            {
+                "frequency" : 109.3,
+                "panning" : 1,
+            },
+        ],
+        "category" : "Binaural",
+    },
+    {
+        "name" : "6.1Hz Relax",
+        "image" : "Binaural",
+        "oscillators" : [
+            {
+                "frequency" : 81,
+                "panning" : 0,
+            },
+            {
+                "frequency" : 87.1,
+                "panning" : 1,
+            },
+        ],
+        "category" : "Binaural",
+    },
+    {
+        "name" : "3.8Hz Sleep",
+        "image" : "Binaural",
+        "oscillators" : [
+            {
+                "frequency" : 84.3,
+                "panning" : 0,
+            },
+            {
+                "frequency" : 80.5,
+                "panning" : 1,
+            },
+        ],
+        "category" : "Binaural",
+    },
+    {
+        "name" : "1.7Hz Lucid Dreaming",
+        "image" : "Binaural",
+        "oscillators" : [
+            {
+                "frequency" : 91.2,
+                "panning" : 0,
+            },
+            {
+                "frequency" : 92.9,
+                "panning" : 1,
+            },
+        ],
+        "category" : "Binaural",
+    },
+    
+    {
+        "name" : "ignore me",
+        "image" : "TODO fix this bug",
+        "oscillators" : [],
+        "category" : "",
+        "reason" : "if this is not present, the last SynthesizedSoundSource won't work"
+    },
+]

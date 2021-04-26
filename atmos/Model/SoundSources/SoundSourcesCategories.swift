@@ -1,5 +1,5 @@
 //
-//  Categories.swift
+//  SoundSourcesCategories.swift
 //  atmos
 //
 //  Created by Matteo Muraca on 23/04/2021.
@@ -14,7 +14,7 @@ var sampleCategories: [String] = [
     "Nature"
 ]
 
-var synthCategories: [String] = [
+var singleSynthCategories: [String] = [
     "Binaural"
 ]
 

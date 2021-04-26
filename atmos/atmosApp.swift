@@ -9,8 +9,6 @@ import SwiftUI
 
 @main
 struct atmosApp: App {
-    let shared = SharedData()
-
     var body: some Scene {
         WindowGroup {
             ContentView()
