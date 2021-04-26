@@ -40,7 +40,7 @@ struct PlayerComponent<T: SoundSource>: View {
     }
 }
 
-struct SamplePlayerComponent_Previews: PreviewProvider {
+struct PlayerComponent_Previews: PreviewProvider {
     static var previews: some View {
         PlayerComponent(soundSource: SampledSoundSource(id: 5, name: "Rain", image: "Rain", soundFile: "Rain.wav"))
     }

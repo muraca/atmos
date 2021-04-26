@@ -29,7 +29,7 @@
 		103FDDA4262DD97A0056A7E3 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103FDDA3262DD97A0056A7E3 /* SharedData.swift */; };
 		10552E4C2636969B00AF0C14 /* SynthesizedSoundSources.json in Resources */ = {isa = PBXBuildFile; fileRef = 10552E4B2636969B00AF0C14 /* SynthesizedSoundSources.json */; };
 		10552E532636984000AF0C14 /* SynthesizedSoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10552E522636984000AF0C14 /* SynthesizedSoundSource.swift */; };
-		10552E562636A9DC00AF0C14 /* SingleSynthesizedPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10552E552636A9DC00AF0C14 /* SingleSynthesizedPlayerView.swift */; };
+		10552E562636A9DC00AF0C14 /* SinglePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10552E552636A9DC00AF0C14 /* SinglePlayerView.swift */; };
 		10552E592636AC3800AF0C14 /* TitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10552E582636AC3800AF0C14 /* TitleBar.swift */; };
 		10552E5C2636AD0400AF0C14 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10552E5B2636AD0400AF0C14 /* TabItem.swift */; };
 		105BDFEC262ACF0400DA8152 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 105BDFEB262ACF0400DA8152 /* AudioKit */; };
@@ -38,7 +38,7 @@
 		1080A6F1262AE9CD006EB381 /* Thunderstorm1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6EB262AE9CC006EB381 /* Thunderstorm1.wav */; };
 		1080A6F2262AE9CD006EB381 /* Rain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6EC262AE9CC006EB381 /* Rain.wav */; };
 		1080A6F3262AE9CD006EB381 /* Storm1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6ED262AE9CD006EB381 /* Storm1.wav */; };
-		1080C6B6262B6FA7004BEDB6 /* SamplePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1080C6B5262B6FA7004BEDB6 /* SamplePlayerView.swift */; };
+		1080C6B6262B6FA7004BEDB6 /* MultiplePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1080C6B5262B6FA7004BEDB6 /* MultiplePlayerView.swift */; };
 		10E4A480262AB89600D8B372 /* atmosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E4A47F262AB89600D8B372 /* atmosApp.swift */; };
 		10E4A482262AB89600D8B372 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E4A481262AB89600D8B372 /* ContentView.swift */; };
 		10E4A484262AB89700D8B372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E4A483262AB89700D8B372 /* Assets.xcassets */; };
@@ -70,7 +70,7 @@
 		103FDDA3262DD97A0056A7E3 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		10552E4B2636969B00AF0C14 /* SynthesizedSoundSources.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SynthesizedSoundSources.json; sourceTree = "<group>"; };
 		10552E522636984000AF0C14 /* SynthesizedSoundSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthesizedSoundSource.swift; sourceTree = "<group>"; };
-		10552E552636A9DC00AF0C14 /* SingleSynthesizedPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSynthesizedPlayerView.swift; sourceTree = "<group>"; };
+		10552E552636A9DC00AF0C14 /* SinglePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerView.swift; sourceTree = "<group>"; };
 		10552E582636AC3800AF0C14 /* TitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBar.swift; sourceTree = "<group>"; };
 		10552E5B2636AD0400AF0C14 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		1080A6E8262AE9CC006EB381 /* Thunderstorm2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Thunderstorm2.wav; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		1080A6EB262AE9CC006EB381 /* Thunderstorm1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Thunderstorm1.wav; sourceTree = "<group>"; };
 		1080A6EC262AE9CC006EB381 /* Rain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Rain.wav; sourceTree = "<group>"; };
 		1080A6ED262AE9CD006EB381 /* Storm1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Storm1.wav; sourceTree = "<group>"; };
-		1080C6B5262B6FA7004BEDB6 /* SamplePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePlayerView.swift; sourceTree = "<group>"; };
+		1080C6B5262B6FA7004BEDB6 /* MultiplePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePlayerView.swift; sourceTree = "<group>"; };
 		10E4A47C262AB89600D8B372 /* atmos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = atmos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E4A47F262AB89600D8B372 /* atmosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atmosApp.swift; sourceTree = "<group>"; };
 		10E4A481262AB89600D8B372 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,8 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				1012433A262AC48100D0861F /* PlayerComponent.swift */,
-				1080C6B5262B6FA7004BEDB6 /* SamplePlayerView.swift */,
-				10552E552636A9DC00AF0C14 /* SingleSynthesizedPlayerView.swift */,
+				1080C6B5262B6FA7004BEDB6 /* MultiplePlayerView.swift */,
+				10552E552636A9DC00AF0C14 /* SinglePlayerView.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -314,11 +314,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				10E4A489262AB89700D8B372 /* Persistence.swift in Sources */,
-				10552E562636A9DC00AF0C14 /* SingleSynthesizedPlayerView.swift in Sources */,
+				10552E562636A9DC00AF0C14 /* SinglePlayerView.swift in Sources */,
 				1012433B262AC48100D0861F /* PlayerComponent.swift in Sources */,
 				103FDDA4262DD97A0056A7E3 /* SharedData.swift in Sources */,
 				10124344262AC6FF00D0861F /* SampledSoundSource.swift in Sources */,
-				1080C6B6262B6FA7004BEDB6 /* SamplePlayerView.swift in Sources */,
+				1080C6B6262B6FA7004BEDB6 /* MultiplePlayerView.swift in Sources */,
 				10E4A482262AB89600D8B372 /* ContentView.swift in Sources */,
 				10327C762632D07D00C707F1 /* SoundSourcesCategories.swift in Sources */,
 				10552E5C2636AD0400AF0C14 /* TabItem.swift in Sources */,

@@ -17,8 +17,8 @@ struct ContentView: View {
                     TitleBar(text: c, color: categoryColor[c]!)
                         .environmentObject(shared)
                     
-                    SamplePlayerView(category: c,
-                                     sampledSoundSources: shared.sampledSoundSources[c]!)
+                    MultiplePlayerView(category: c,
+                                       soundSources: shared.sampledSoundSources[c]!)
                     
                     Spacer()
                 }
@@ -32,8 +32,8 @@ struct ContentView: View {
                     TitleBar(text: c, color: categoryColor[c]!)
                         .environmentObject(shared)
                     
-                    SingleSynthesizedPlayerView(category: c,
-                                                synthesizedSoundSources: shared.synthesizedSoundSources[c]!)
+                    SinglePlayerView(category: c,
+                                     soundSources: shared.synthesizedSoundSources[c]!)
                     Spacer()
                 }
                 .navigationTitle(c)
