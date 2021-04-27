@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    var shared: SharedData = SharedData()
+    var shared: SharedData
+    @Environment(\.colorScheme) var globalColorScheme: ColorScheme
     
     var body: some View {
         TabView {
@@ -45,7 +46,7 @@ struct ContentView: View {
                     
                 Text("Noises")
                     .font(.title)
-                    .foregroundColor(.black)
+                    .foregroundColor(.primary)
                 
                 MultiplePlayerView(category: "Noise",
                                    soundSources: shared.noiseSoundSources,
@@ -55,7 +56,7 @@ struct ContentView: View {
             .tabItem({TabItem(icon: categoryIcon["Noise"]!, title: "Waves")})
             
             VStack {
-                TitleBar(text: "Hello, \(shared.username)!")
+                TitleBar(text: "User")
                     .environmentObject(shared)
                 
                 UserView(shared: shared)
@@ -65,11 +66,12 @@ struct ContentView: View {
             .navigationTitle("User")
             .tabItem({TabItem(icon: "person", title: "User")})
         }
+        .preferredColorScheme(globalColorScheme)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(shared: SharedData())
     }
 }

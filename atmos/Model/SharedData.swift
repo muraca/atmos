@@ -8,15 +8,16 @@
 import Foundation
 import Combine
 import AudioKit
+import SwiftUI
 
 final class SharedData: ObservableObject {
-//    @Published var persistenceController = PersistenceController.shared
+    @Published var username: String = UserDefaults.standard.string(forKey: "username") ?? "user"
     
-    @Published var username: String = "user"
+    var sampledSoundSources: [String: [SampledSoundSource]] = [:]
+    var synthesizedSoundSources: [String: [SynthesizedSoundSource]] = [:]
+    var noiseSoundSources: [NoiseSoundSource] = []
     
-    var sampledSoundSources: [String: [SampledSoundSource]]
-    var synthesizedSoundSources: [String: [SynthesizedSoundSource]]
-    var noiseSoundSources: [NoiseSoundSource]
+    @Published var presets: [AtmosPreset] = []
     
     var engine: AudioEngine
     var mixer: Mixer
@@ -53,6 +54,8 @@ final class SharedData: ObservableObject {
         for source in noiseSoundSources {
             source.attachTo(mixer: mixer)
         }
+        
+        loadPresetsFromMemory()
     }
     
     func mute() {
@@ -106,6 +109,93 @@ final class SharedData: ObservableObject {
         
         for source in noiseSoundSources {
             source.stop()
+        }
+    }
+    
+    func loadPreset(p: AtmosPreset) {
+        mute()
+        
+        for info in p.sampledSourcesInfo {
+            for source in sampledSoundSources[info.category]! {
+                if source.id == info.id {
+                    source.setVolume(vol: info.volume)
+                    break
+                }
+            }
+        }
+        
+        for info in p.synthesizedSourcesInfo {
+            for source in synthesizedSoundSources[info.category]! {
+                if source.id == info.id {
+                    source.setVolume(vol: info.volume)
+                    break
+                }
+            }
+        }
+        
+        for info in p.noiseSourcesInfo {
+            for source in noiseSoundSources {
+                if source.id == info.id {
+                    source.setVolume(vol: info.volume)
+                    break
+                }
+            }
+        }
+    }
+    
+    func saveUsername(username: String) {
+        self.username = username
+        UserDefaults.standard.set(username, forKey: "username")
+    }
+    
+    func savePreset(preset: String) {
+        let p = AtmosPreset(name: preset)
+        
+        for (_, sources) in sampledSoundSources {
+            for source in sources {
+                if source.volume > 0 {
+                    p.sampledSourcesInfo.append(SourceInfo(category: source.category, id: source.id, volume: source.volume))
+                }
+            }
+        }
+        
+        for (_, sources) in synthesizedSoundSources {
+            for source in sources {
+                if source.volume > 0 {
+                    p.synthesizedSourcesInfo.append(SourceInfo(category: source.category, id: source.id, volume: source.volume))
+                }
+            }
+        }
+        
+        for source in noiseSoundSources {
+            if source.volume > 0 {
+                p.noiseSourcesInfo.append(SourceInfo(category: source.category, id: source.id, volume: source.volume))
+            }
+        }
+        
+        presets.append(p)
+        
+        savePresetsInMemory()
+    }
+
+    func savePresetsInMemory() {
+        do {
+            let encodedData = try NSKeyedArchiver.archivedData(withRootObject: presets, requiringSecureCoding: false)
+            UserDefaults.standard.set(encodedData, forKey: "presets")
+        } catch {
+            Log("Unable to save presets in memory")
+        }
+    }
+    
+    func loadPresetsFromMemory() {
+        do {
+            let decoded = UserDefaults.standard.object(forKey: "presets") as! Data?
+            if decoded != nil {
+                presets = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(decoded!) as! [AtmosPreset]
+            }
+        } catch {
+            Log("Unable to load presets from memory")
+            presets = []
         }
     }
 }
@@ -209,3 +299,5 @@ func loadNoiseSoundSources() -> [NoiseSoundSource] {
         NoiseSoundSource(id: 2, type: "Brown Noise", image: "SoundWave")
     ]
 }
+
+

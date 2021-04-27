@@ -9,7 +9,7 @@
         <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="58"/>
         <element name="Preset" positionX="-54" positionY="0" width="128" height="88"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="58"/>
     </elements>
 </model>

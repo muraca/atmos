@@ -16,6 +16,7 @@
 		103635E226316E4E0034C064 /* Wolf.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103635E126316E4E0034C064 /* Wolf.wav */; };
 		103635E5263173900034C064 /* Jungle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103635E4263173900034C064 /* Jungle.wav */; };
 		103635E826317CC70034C064 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103635E726317CC70034C064 /* UserView.swift */; };
+		1036648726383F3600684E71 /* TextAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036648626383F3600684E71 /* TextAlert.swift */; };
 		1038F7412636D04200E0BB6F /* NoiseSoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038F7402636D04200E0BB6F /* NoiseSoundSource.swift */; };
 		103FDD7D262DC6790056A7E3 /* Bubbles.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD7C262DC6790056A7E3 /* Bubbles.wav */; };
 		103FDD84262DC8850056A7E3 /* Birds.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD83262DC8850056A7E3 /* Birds.wav */; };
@@ -40,12 +41,11 @@
 		1080A6F2262AE9CD006EB381 /* Rain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6EC262AE9CC006EB381 /* Rain.wav */; };
 		1080A6F3262AE9CD006EB381 /* Storm1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1080A6ED262AE9CD006EB381 /* Storm1.wav */; };
 		1080C6B6262B6FA7004BEDB6 /* MultiplePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1080C6B5262B6FA7004BEDB6 /* MultiplePlayerView.swift */; };
+		10CCAFE62637469100FB1CB4 /* AtmosPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CCAFE52637469100FB1CB4 /* AtmosPreset.swift */; };
 		10E4A480262AB89600D8B372 /* atmosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E4A47F262AB89600D8B372 /* atmosApp.swift */; };
 		10E4A482262AB89600D8B372 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E4A481262AB89600D8B372 /* ContentView.swift */; };
 		10E4A484262AB89700D8B372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E4A483262AB89700D8B372 /* Assets.xcassets */; };
 		10E4A487262AB89700D8B372 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E4A486262AB89700D8B372 /* Preview Assets.xcassets */; };
-		10E4A489262AB89700D8B372 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E4A488262AB89700D8B372 /* Persistence.swift */; };
-		10E4A48C262AB89700D8B372 /* atmos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10E4A48A262AB89700D8B372 /* atmos.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +58,7 @@
 		103635E126316E4E0034C064 /* Wolf.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wolf.wav; sourceTree = "<group>"; };
 		103635E4263173900034C064 /* Jungle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jungle.wav; sourceTree = "<group>"; };
 		103635E726317CC70034C064 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		1036648626383F3600684E71 /* TextAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlert.swift; sourceTree = "<group>"; };
 		1038F7402636D04200E0BB6F /* NoiseSoundSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseSoundSource.swift; sourceTree = "<group>"; };
 		103FDD7C262DC6790056A7E3 /* Bubbles.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bubbles.wav; sourceTree = "<group>"; };
 		103FDD83262DC8850056A7E3 /* Birds.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Birds.wav; sourceTree = "<group>"; };
@@ -81,13 +82,12 @@
 		1080A6EC262AE9CC006EB381 /* Rain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Rain.wav; sourceTree = "<group>"; };
 		1080A6ED262AE9CD006EB381 /* Storm1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Storm1.wav; sourceTree = "<group>"; };
 		1080C6B5262B6FA7004BEDB6 /* MultiplePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePlayerView.swift; sourceTree = "<group>"; };
+		10CCAFE52637469100FB1CB4 /* AtmosPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosPreset.swift; sourceTree = "<group>"; };
 		10E4A47C262AB89600D8B372 /* atmos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = atmos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E4A47F262AB89600D8B372 /* atmosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atmosApp.swift; sourceTree = "<group>"; };
 		10E4A481262AB89600D8B372 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		10E4A483262AB89700D8B372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10E4A486262AB89700D8B372 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		10E4A488262AB89700D8B372 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		10E4A48B262AB89700D8B372 /* atmos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = atmos.xcdatamodel; sourceTree = "<group>"; };
 		10E4A48D262AB89700D8B372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,10 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				10E4A481262AB89600D8B372 /* ContentView.swift */,
-				10552E5B2636AD0400AF0C14 /* TabItem.swift */,
-				10552E582636AC3800AF0C14 /* TitleBar.swift */,
 				103635E726317CC70034C064 /* UserView.swift */,
 				10124339262AC46800D0861F /* Player */,
+				10CCAFE9263753BD00FB1CB4 /* Utilities */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				103FDDA3262DD97A0056A7E3 /* SharedData.swift */,
+				10CCAFE52637469100FB1CB4 /* AtmosPreset.swift */,
 				10552E602636BE6400AF0C14 /* SoundSources */,
 			);
 			path = Model;
@@ -180,6 +180,16 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		10CCAFE9263753BD00FB1CB4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				10552E5B2636AD0400AF0C14 /* TabItem.swift */,
+				10552E582636AC3800AF0C14 /* TitleBar.swift */,
+				1036648626383F3600684E71 /* TextAlert.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		10E4A473262AB89600D8B372 = {
 			isa = PBXGroup;
 			children = (
@@ -201,11 +211,9 @@
 			children = (
 				10E4A483262AB89700D8B372 /* Assets.xcassets */,
 				10E4A47F262AB89600D8B372 /* atmosApp.swift */,
+				10E4A48D262AB89700D8B372 /* Info.plist */,
 				1012433E262AC4D500D0861F /* Model */,
 				10124337262ABC4000D0861F /* View */,
-				10E4A488262AB89700D8B372 /* Persistence.swift */,
-				10E4A48D262AB89700D8B372 /* Info.plist */,
-				10E4A48A262AB89700D8B372 /* atmos.xcdatamodeld */,
 				103FDD9E262DD6CC0056A7E3 /* Resources */,
 				1080A6E7262AE93D006EB381 /* Sounds */,
 				10E4A485262AB89700D8B372 /* Preview Content */,
@@ -316,9 +324,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10E4A489262AB89700D8B372 /* Persistence.swift in Sources */,
 				10552E562636A9DC00AF0C14 /* SinglePlayerView.swift in Sources */,
 				1012433B262AC48100D0861F /* PlayerComponent.swift in Sources */,
+				1036648726383F3600684E71 /* TextAlert.swift in Sources */,
+				10CCAFE62637469100FB1CB4 /* AtmosPreset.swift in Sources */,
 				103FDDA4262DD97A0056A7E3 /* SharedData.swift in Sources */,
 				10124344262AC6FF00D0861F /* SampledSoundSource.swift in Sources */,
 				1080C6B6262B6FA7004BEDB6 /* MultiplePlayerView.swift in Sources */,
@@ -326,7 +335,6 @@
 				10327C762632D07D00C707F1 /* SoundSourcesCategories.swift in Sources */,
 				10552E5C2636AD0400AF0C14 /* TabItem.swift in Sources */,
 				1038F7412636D04200E0BB6F /* NoiseSoundSource.swift in Sources */,
-				10E4A48C262AB89700D8B372 /* atmos.xcdatamodeld in Sources */,
 				103635E826317CC70034C064 /* UserView.swift in Sources */,
 				10552E592636AC3800AF0C14 /* TitleBar.swift in Sources */,
 				10327C7B263305C700C707F1 /* SoundSource.swift in Sources */,
@@ -543,19 +551,6 @@
 			productName = AudioKit;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		10E4A48A262AB89700D8B372 /* atmos.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				10E4A48B262AB89700D8B372 /* atmos.xcdatamodel */,
-			);
-			currentVersion = 10E4A48B262AB89700D8B372 /* atmos.xcdatamodel */;
-			path = atmos.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 10E4A474262AB89600D8B372 /* Project object */;
 }

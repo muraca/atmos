@@ -34,5 +34,5 @@ var categoryColor: [String:Color] = [
     "White Noise" : .gray,
     "Pink Noise" : .pink,
     "Brown Noise" : .init(red: 0.64, green: 0.17, blue: 0.17),
-    "" : .black
+    "" : .secondary
 ]

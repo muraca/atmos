@@ -10,7 +10,7 @@ import SwiftUI
 struct TitleBar: View {
     @EnvironmentObject var shared: SharedData
     var text: String = "Title"
-    var color: Color = .black
+    var color: Color = .primary
     
     var body: some View {
         HStack {
