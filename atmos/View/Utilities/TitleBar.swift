@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TitleBar: View {
     @EnvironmentObject var shared: SharedData
-    var text: String = "Title"
+    var text: String = NSLocalizedString("Title", comment: "")
     var color: Color = .primary
     
     var body: some View {

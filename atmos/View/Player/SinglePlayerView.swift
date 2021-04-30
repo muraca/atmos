@@ -14,7 +14,7 @@ struct SinglePlayerView<T: SoundSource>: View {
     
     var body: some View {
         VStack {
-            Text(soundSources[chosen].name)
+            Text(NSLocalizedString(soundSources[chosen].name, comment: ""))
                 .font(.title)
                 .foregroundColor(categoryColor[category]!)
             
@@ -28,7 +28,7 @@ struct SinglePlayerView<T: SoundSource>: View {
             
             Menu {
                 ForEach(soundSources) { source in
-                    Button(source.name, action: {
+                    Button(NSLocalizedString(source.name, comment: ""), action: {
                         let vol = soundSources[chosen].getVolume()
                         soundSources[chosen].setVolume(vol: 0)
                         chosen = source.id
@@ -37,7 +37,7 @@ struct SinglePlayerView<T: SoundSource>: View {
                 }
             }
             label: {
-                Text("Select source")
+                Text(NSLocalizedString("Select source", comment: ""))
                     .font(.title3)
                     .foregroundColor(categoryColor[category]!)
             }

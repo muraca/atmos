@@ -65,8 +65,8 @@ struct AlertWrapper<Content: View>: UIViewControllerRepresentable {
 public struct TextAlert {
     public var title: String
     public var placeholder: String = ""
-    public var accept: String = "OK"
-    public var cancel: String = "Cancel"
+    public var accept: String = NSLocalizedString("OK", comment: "")
+    public var cancel: String = NSLocalizedString("Cancel", comment: "")
     public var action: (String?) -> ()
 }
 

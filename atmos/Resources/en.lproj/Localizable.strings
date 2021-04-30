@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  atmos
+
+  Created by Matteo Muraca on 30/04/2021.
+  
+*/
+
+"Water" = "Water";
+"Nature" = "Nature";
+"Weather" = "Weather";
+"Binaural" = "Binaural";
+"White Noise" = "White Noise";
+"Pink Noise" = "Pink Noise";
+"Brown Noise" = "Brown Noise";
+"Waves" = "Waves";
+"Noises" = "Noises";
+"User" = "User";
+"Hello" = "Hello";
+"Change username" = "Change username";
+"My presets" = "My presets";
+"Save current preset" = "Save current preset";
+"New username" = "New username";
+"Preset name" = "Preset name";
+"Title" = "Title";
+"OK" = "OK";
+"Cancel" = "Cancel";
+"Select source" = "Select source";
+"20.1Hz Energy" = "20.1Hz Energy";
+"15.6Hz Focus" = "15.6Hz Focus";
+"10.9Hz Creativity" = "10.9Hz Creativity";
+"6.1Hz Relax" = "6.1Hz Relax";
+"3.8Hz Sleep" = "3.8Hz Sleep";
+"1.7Hz Lucid Dreaming" = "1.7Hz Lucid Dreaming";

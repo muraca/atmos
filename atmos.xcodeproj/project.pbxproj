@@ -18,6 +18,7 @@
 		103635E826317CC70034C064 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103635E726317CC70034C064 /* UserView.swift */; };
 		1036648726383F3600684E71 /* TextAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036648626383F3600684E71 /* TextAlert.swift */; };
 		1038F7412636D04200E0BB6F /* NoiseSoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038F7402636D04200E0BB6F /* NoiseSoundSource.swift */; };
+		103D20CE263C95E400696909 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 103D20D0263C95E400696909 /* Localizable.strings */; };
 		103FDD7D262DC6790056A7E3 /* Bubbles.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD7C262DC6790056A7E3 /* Bubbles.wav */; };
 		103FDD84262DC8850056A7E3 /* Birds.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD83262DC8850056A7E3 /* Birds.wav */; };
 		103FDD87262DCA4B0056A7E3 /* Raft.wav in Resources */ = {isa = PBXBuildFile; fileRef = 103FDD86262DCA4A0056A7E3 /* Raft.wav */; };
@@ -60,6 +61,8 @@
 		103635E726317CC70034C064 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		1036648626383F3600684E71 /* TextAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlert.swift; sourceTree = "<group>"; };
 		1038F7402636D04200E0BB6F /* NoiseSoundSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseSoundSource.swift; sourceTree = "<group>"; };
+		103D20CF263C95E400696909 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		103D20D6263C9BB600696909 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		103FDD7C262DC6790056A7E3 /* Bubbles.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bubbles.wav; sourceTree = "<group>"; };
 		103FDD83262DC8850056A7E3 /* Birds.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Birds.wav; sourceTree = "<group>"; };
 		103FDD86262DCA4A0056A7E3 /* Raft.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Raft.wav; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 			children = (
 				103FDD9F262DD7070056A7E3 /* SampledSoundSources.json */,
 				10552E4B2636969B00AF0C14 /* SynthesizedSoundSources.json */,
+				103D20D0263C95E400696909 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -273,6 +277,7 @@
 			knownRegions = (
 				en,
 				Base,
+				it,
 			);
 			mainGroup = 10E4A473262AB89600D8B372;
 			packageReferences = (
@@ -294,6 +299,7 @@
 			files = (
 				103635DC26316B7C0034C064 /* Crickets.wav in Resources */,
 				1080A6F1262AE9CD006EB381 /* Thunderstorm1.wav in Resources */,
+				103D20CE263C95E400696909 /* Localizable.strings in Resources */,
 				103FDD87262DCA4B0056A7E3 /* Raft.wav in Resources */,
 				103635E5263173900034C064 /* Jungle.wav in Resources */,
 				1080A6F2262AE9CD006EB381 /* Rain.wav in Resources */,
@@ -345,11 +351,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		103D20D0263C95E400696909 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				103D20CF263C95E400696909 /* en */,
+				103D20D6263C9BB600696909 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		10E4A48E262AB89700D8B372 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -411,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

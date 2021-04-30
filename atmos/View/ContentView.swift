@@ -15,7 +15,7 @@ struct ContentView: View {
         TabView {
             ForEach(sampleCategories, id: \.self) { c in
                 VStack {
-                    TitleBar(text: c, color: categoryColor[c]!)
+                    TitleBar(text: NSLocalizedString(c, comment: ""), color: categoryColor[c]!)
                         .environmentObject(shared)
                     
                     MultiplePlayerView(category: c,
@@ -23,16 +23,16 @@ struct ContentView: View {
                     
                     Spacer()
                 }
-                .navigationTitle(c)
-                .tabItem({TabItem(icon: categoryIcon[c]!, title: c)})
+                .navigationTitle(NSLocalizedString(c, comment: ""))
+                .tabItem({TabItem(icon: categoryIcon[c]!, title: NSLocalizedString(c, comment: ""))})
                 
             }
             
             VStack {
-                TitleBar(text: "Waves")
+                TitleBar(text: NSLocalizedString("Waves", comment: ""))
                     .environmentObject(shared)
                 
-                Text("Binaural")
+                Text(NSLocalizedString("Binaural", comment: ""))
                     .font(.title)
                     .foregroundColor(categoryColor["Binaural"]!)
                 
@@ -44,7 +44,7 @@ struct ContentView: View {
                 Divider()
                     .frame(width: 0.0, height: 10.0)
                     
-                Text("Noises")
+                Text(NSLocalizedString("Noises", comment: ""))
                     .font(.title)
                     .foregroundColor(.primary)
                 
@@ -52,19 +52,19 @@ struct ContentView: View {
                                    soundSources: shared.noiseSoundSources,
                                    scrollable: false)
             }
-            .navigationTitle("Waves")
-            .tabItem({TabItem(icon: categoryIcon["Noise"]!, title: "Waves")})
+            .navigationTitle(NSLocalizedString("Waves", comment: ""))
+            .tabItem({TabItem(icon: categoryIcon["Noise"]!, title: NSLocalizedString("Waves", comment: ""))})
             
             VStack {
-                TitleBar(text: "User")
+                TitleBar(text: NSLocalizedString("User", comment: ""))
                     .environmentObject(shared)
                 
                 UserView(shared: shared)
                 
                 Spacer()
             }
-            .navigationTitle("User")
-            .tabItem({TabItem(icon: "person", title: "User")})
+            .navigationTitle(NSLocalizedString("User", comment: ""))
+            .tabItem({TabItem(icon: "person", title: NSLocalizedString("User", comment: ""))})
         }
         .preferredColorScheme(globalColorScheme)
     }

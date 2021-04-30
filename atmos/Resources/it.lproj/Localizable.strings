@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  atmos
+
+  Created by Matteo Muraca on 30/04/2021.
+  
+*/
+
+"Water" = "Acqua";
+"Nature" = "Natura";
+"Weather" = "Meteo";
+"Binaural" = "Binaurali";
+"White Noise" = "Rumore Bianco";
+"Pink Noise" = "Rumore Rosa";
+"Brown Noise" = "Rumore Marrone";
+"Waves" = "Onde";
+"Noises" = "Rumori";
+"User" = "Utente";
+"Hello" = "Ciao";
+"Change username" = "Cambia nome utente";
+"My presets" = "I miei sottofondi";
+"Save current preset" = "Salva il sottofondo attuale";
+"New username" = "Nuovo nome utente";
+"Preset name" = "Nome del nuovo sottofondo";
+"Title" = "Titolo";
+"OK" = "Conferma";
+"Cancel" = "Annulla";
+"Select source" = "Seleziona sorgente";
+"20.1Hz Energy" = "20.1Hz Energia";
+"15.6Hz Focus" = "15.6Hz Concentrazione";
+"10.9Hz Creativity" = "10.9Hz Creatività";
+"6.1Hz Relax" = "6.1Hz Relax";
+"3.8Hz Sleep" = "3.8Hz Sonno";
+"1.7Hz Lucid Dreaming" = "1.7Hz Sogni Lucidi";

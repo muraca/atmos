@@ -15,14 +15,14 @@ struct UserView: View {
     
     var body: some View {
         VStack {
-            Text("Hello, \(shared.username)!")
+            Text(NSLocalizedString("Hello", comment: "") + ", \(shared.username)!")
                 .font(.largeTitle)
                 .multilineTextAlignment(.center)
             
             Divider()
             
             HStack {
-                Button("Change username", action: {
+                Button(NSLocalizedString("Change username", comment: ""), action: {
                     withAnimation {
                         self.isShowingUsernameTextFieldAlert.toggle()
                     }
@@ -32,12 +32,12 @@ struct UserView: View {
             
             Divider()
             
-            Text("My presets")
+            Text(NSLocalizedString("My presets", comment: ""))
                 .font(.title)
                 .multilineTextAlignment(.center)
             
             HStack {
-                Button("Save current preset", action: {
+                Button(NSLocalizedString("Save current preset", comment: ""), action: {
                     withAnimation {
                         self.isShowingNewPresetTextFieldAlert.toggle()
                     }
@@ -57,12 +57,14 @@ struct UserView: View {
         }
         .font(.title2)
         .padding()
-        .alert(isPresented: $isShowingUsernameTextFieldAlert, TextAlert(title: "New username", action: {
-            shared.saveUsername(username: $0!)
-         }))
-        .alert(isPresented: $isShowingNewPresetTextFieldAlert, TextAlert(title: "Preset name", action: {
-            shared.savePreset(preset: $0!)
-         }))
+        .alert(isPresented: $isShowingUsernameTextFieldAlert,
+               TextAlert(title: NSLocalizedString("New username", comment: ""), action: {
+                    shared.saveUsername(username: $0!)
+               }))
+        .alert(isPresented: $isShowingNewPresetTextFieldAlert,
+               TextAlert(title: NSLocalizedString("Preset name", comment: ""), action: {
+                    shared.savePreset(preset: $0!)
+               }))
         
     }
     
@@ -74,7 +76,6 @@ struct UserView: View {
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-//        let s = SharedData()
         UserView(shared: SharedData())
     }
 }

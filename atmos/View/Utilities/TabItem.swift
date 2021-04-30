@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabItem: View {
     var icon: String = "xmark"
-    var title: String = "Title"
+    var title: String = NSLocalizedString("Title", comment: "")
     
     var body: some View {
         Image(systemName: icon)
