@@ -2,7 +2,7 @@
     <img src="./pictures/icon.png" width="74">
     <h1>atmos</h1>
 </div>
-iOS application developed using Swing, SwingUI and [AudioKit](https://github.com/AudioKit/AudioKit) for Mobile Programming course, Università della Calabria, AA 2020/2021.
+iOS application developed using Swing, SwingUI and <a href="https://github.com/AudioKit/AudioKit">AudioKit</a> for Mobile Programming course, Università della Calabria, AA 2020/2021.
 
 
 Users can customize the background sound by changing the volume of the different sources.  
